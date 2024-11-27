@@ -25,6 +25,8 @@ body{
 
 }
 
+
+
 .line{
     width: 95vw;
     margin: 20px;
@@ -68,6 +70,12 @@ body{
     padding-right: 60px;
     position: relative;
     overflow-y: hidden;
+    transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+
+
     
 }
 .line_after_hori_2::after{
@@ -600,3 +608,133 @@ body{
 }
 
 
+
+.hyml_lo{
+    transform: translateY(6px);
+}
+.front_stack_logos{
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+
+.this_class{
+    margin: 10px;
+    padding: 10px;
+
+}
+.front_stacl{
+    font-size: 1.5rem;
+    font-weight: 200;
+
+    width: 65vw;
+
+}
+
+@media screen and (max-width:600px) {
+    .this_class{
+        width: 30%;
+    }
+    .front_stacl{
+        font-size: 1.2rem;
+    }
+    
+}
+.fottter_op{
+    width: 100vw;
+    background-color: #E6FF81;
+}
+.text_here{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 40px 0px 40px 0px ;
+
+}
+
+
+
+
+
+
+
+
+
+
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.2s;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.front:nth-child(2){
+    transition-delay: 200ms;
+}
+.front:nth-child(3){
+    transition-delay: 400ms;
+}
+.front:nth-child(4){
+    transition-delay: 600ms;
+}
+@media(prefers-reduced-motion){
+    .hidden{
+        transform: none;
+    }
+} 
+
+
+.urls_at_nav::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #E6FF81;
+    transition: all 0.3s ease;
+
+}
+.home:hover::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    border-radius: 20px;
+    width: 40%;
+    bottom: 0px;
+    left: 0px;
+    background-color: black;
+
+}
+.about:hover::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    border-radius: 20px;
+    width: 50%;
+    bottom: 0px;
+    left: 0px;
+    background-color: black;
+
+}
+.project:hover::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    border-radius: 20px;
+    width: 60%;
+    bottom: 0px;
+    left: 0px;
+    background-color: black;
+}
