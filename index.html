@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <meta
       name="portfolio"
@@ -27,10 +28,14 @@
             <div class=" nameorlogo line_after_hori">Ayush</div>
 
             <div class=" otherUrls">
-                <div class=" urls_at_nav line_after_hori_2 home">Home</div>
-                <div  class=" urls_at_nav line_after_hori_2 about"  >About</div>
-                <div  class=" urls_at_nav line_after_hori_2 project"  >Project</div>
-                <button class=" button_for_contact">Contact</button>
+                <div class=" urls_at_nav line_after_hori_2 home">
+                  <a href="/">Home</a>
+                </div>
+                <div  class=" urls_at_nav line_after_hori_2 about"  ><a href="#about_id">About</a></div>
+                <div  class=" urls_at_nav line_after_hori_2 project"  ><a href="#project_id">Projects</a></div>
+                <button class=" button_for_contact" >
+                  <a href="#contact_id">Contact</a>
+                </button>
             </div>
         </div>
         <div class=" line_bottom line"></div>
@@ -49,10 +54,10 @@
       </nav>
       <div class=" navbar_mobile_sidebar" id="navbar_mobile_sidebar">
         <ul class=" navbar_mobile_menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about_id">About</a></li>
+          <li><a href="#project_id">Projects</a></li>
+          <li><a href="#contact_id">Contact</a></li>
         </ul>
       </div>
       <div class=" navbar_mobile_overlay" id="navbar_mobile_overlay"></div>
@@ -93,7 +98,7 @@
 
 
 
-    <section class=" about_me">
+    <section class=" about_me" id="about_id">
         <div class=" img_on_about"><img src="./statics/behind_the_code.svg" alt="myphoto" sizes="" srcset=""></div>
         <div class=" text_on_about">
             <h2 class=" heading_2s hidden">Behind The Code</h2>
@@ -131,16 +136,50 @@
 
 
 
-    <section class=" projects">
+    <section class=" projects" id="project_id">
         <div class=" text_cont_projects">
             <div class=" projects_heading hidden">My Creations</div>
-            <div class=" contain_projects_name">
-                <div class=" subheading_projcts hidden" >URL SHOERNER</div>
-                <div class=" subheading_projcts hidden" >TIME TRAVEL</div>
-                <div class=" subheading_projcts hidden" >PASSWORD MANAGER</div>
-                <div class=" subheading_projcts hidden" >REMUME BUILDER</div>
-                <div class="  last_line hidden" >HELLO WORLD</div>
-            </div>
+
+
+
+            <div class="menu-container">
+              <div class="menu-list">
+                  <div class="menu-item hidden-item">
+                      <a href="#" class="menu-link">
+                      </a>
+                  </div>
+                  <div class="menu-item">
+                      <a href="#" class="menu-link">
+                          URL SHORTENER
+                          <i class="fa fa-github"></i>
+                      </a>
+                  </div>
+                  <div class="menu-item">
+                      <a href="#" class="menu-link">
+                          TIME TRAVEL
+                          <i class="fa fa-github"></i>
+                      </a>
+                  </div>
+                  <div class="menu-item">
+                      <a href="#" class="menu-link">
+                          PASSWORD MANAGER
+                          <i class="fa fa-github"></i>
+                      </a>
+                  </div>
+                  <div class="menu-item">
+                      <a href="#" class="menu-link">
+                          RESUME BUILDER
+                          <i class="fa fa-github"></i>
+                      </a>
+                  </div>
+                  <div class="menu-item">
+                      <a href="#" class="menu-link">
+                          HELLO WORLD
+                          <i class="fa fa-github"></i>
+                      </a>
+                  </div>
+              </div>
+          </div>
 
 
         </div>
@@ -232,6 +271,160 @@
   </div>
 
 
+<div class="line">
+</div>
+<div class="contact-container" id="contact_id">
+  <h2>Contact Us</h2>
+  <form class="contact-form" action="https://getform.io/f/bkkkevdb" method="POST">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+
+    <button type="submit">Send Message</button>
+</form>
+
+</div>
+
+<style>
+  /* Contact Section Container */
+  .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 50px;
+      background-color: white;
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+  h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #333;
+  }
+
+  .contact-form {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 100%;
+      max-width: 600px;
+      transition: transform 0.3s ease-in-out;
+  }
+
+  /* Disable hover effect on mobile */
+  @media (max-width: 768px) {
+      .contact-form:hover {
+          transform: none; /* Disable hover effect */
+      }
+  }
+
+  .contact-form label {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 8px;
+      display: block;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 2px solid #E6FF81;
+      border-radius: 4px;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+      border-color: black;
+      outline: none;
+  }
+
+  .contact-form textarea {
+      height: 150px;
+      resize: none;
+  }
+
+  .contact-form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #E6FF81;
+      color: black;
+      font-size: 18px;
+      font-weight: 500;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+
+  .contact-form button:hover {
+      background-color: #b4e16d;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+      .contact-container {
+          padding: 20px;
+      }
+
+      h2 {
+          font-size: 28px;
+      }
+
+      .contact-form {
+          padding: 30px;
+          max-width: 90vw; /* 90% of the viewport width for mobile */
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+          font-size: 14px; /* Decrease input font size on smaller screens */
+      }
+
+      .contact-form button {
+          font-size: 16px; /* Button font size for mobile */
+      }
+  }
+
+  @media (max-width: 480px) {
+      .contact-form {
+          max-width: 80vw; /* 80% of the viewport width for smaller screens */
+      }
+
+      h2 {
+          font-size: 24px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+          font-size: 12px; /* Further reduce font size on very small screens */
+      }
+
+      .contact-form button {
+          font-size: 14px;
+      }
+  }
+
+  /* Prevent overflow issues */
+  html, body {
+      width: 100%;
+      overflow-x: hidden;
+  }
+</style>
+
 
 
 <br><br>
@@ -239,11 +432,6 @@
   <div class=" fottter_op">
     <div class=" text_here">@2024 | Copyright: Ayush Kumar</div>
   </div>
-
-<a href="/contact/">contact_ page here</a>
-
-
-
 
 
 

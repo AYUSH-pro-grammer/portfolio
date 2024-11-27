@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+  
 :root {
     --heading-1: 74px;
     --heading-2: 32px;
@@ -8,6 +13,11 @@
   }
 
   
+a{
+    color: black;
+    text-decoration: none;
+
+}
 *{
     font-family: "Azeret Mono", serif;
     margin: 0px;
@@ -738,3 +748,113 @@ body{
     left: 0px;
     background-color: black;
 }
+
+.menu-container {
+    max-width: 600px;
+    padding: 1rem;
+}
+
+.menu-list {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.menu-item {
+    display: table-row;
+    height: 4rem;
+}
+
+.menu-item.hidden-item {
+    height: 0rem;
+}
+
+.menu-link {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+    letter-spacing: 0.1em;
+    font-family: 'Courier New', monospace;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+.menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
+.menu-link i {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: clamp(1.5rem, 1.4vw, 1rem);
+    transition: all 0.3s ease;
+}
+
+.menu-link:hover {
+    color: #444;
+    transform: translateX(1rem);
+}
+
+.menu-link:hover::after {
+    background-color: #444;
+    transform: scaleX(1.1);
+}
+
+.menu-link:hover i {
+    color: #444;
+    transform: translateY(-50%) rotate(360deg) scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
